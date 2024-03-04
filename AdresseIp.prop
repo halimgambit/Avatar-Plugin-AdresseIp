@@ -1,0 +1,10 @@
+{
+	"modules": { 
+		"AdresseIp": {
+			"version": "1.0",
+			"name": "adresse_ip",
+			"rules": ["ip * address","address * ip","ip * address","address * ip"]
+		}
+	}
+}
+			
