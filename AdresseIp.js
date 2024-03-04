@@ -15,6 +15,8 @@ function adresseIp (data, client) {
 		  if (!response.ok) {
 			throw new Error(`Réponse HTTP non réussie, statut: ${response.status}`);
 		  }
+			
+			const ipAddressInfo = await response.json();
 
 		  Avatar.speak(`Votre adresse ip est ${ipAddressInfo.query.replace(/\./g, '-')} Votre ville est ${ipAddressInfo.city}`, data.client, () => {
 			  Avatar.Speech.end(data.client);
